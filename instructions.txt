@@ -1,0 +1,7 @@
+# Google Documentation Walkthrough
+https://cloud.google.com/python/getting-started/tutorial-app
+
+# Commands
+virtualenv --python python3 env
+source env/bin/activate
+python main.py

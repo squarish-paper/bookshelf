@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block info %}
+{{book.title}}
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col s12 m8 offset-m1 xl7 offset-xl1">
+     <h5>Book Information</h5>
+    <img class="materialboxed" width="650" src="{{book.imageUrl|default('../images/book.jpg', True)}}">
+
+     <div class="section scrollspy" id="details">
+        <div class="row">
+          <div class="input-field col s6">
+             <i class="material-icons prefix">account_circle</i>
+             <input disabled id="icon_parent" type="tel" class="validate" value="{{book.title}}">
+             <label for="icon_parent">Title</label>
+          </div>
+           <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input disabled id="icon_parent" type="tel" class="validate" value="{{book.author}}">
+              <label for="icon_parent">Author</label>
+           </div>
+        </div>
+        <div class="row">
+           <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input disabled id="icon_parent" type="tel" class="validate" value="{{book.publishedDate}}">
+              <label for="icon_parent">Published</label>
+           </div>
+            <div class="input-field col s6">
+               <i class="material-icons prefix">account_circle</i>
+               <input disabled id="icon_parent" type="tel" class="validate" value="{{book.description}}">
+               <label for="icon_parent">Description</label>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="row">
+<div class="btn-group">
+  <a href="/books/{{book.id}}/edit" class="btn btn-primary btn-sm">
+    <i class="glyphicon glyphicon-edit"></i>
+    Edit book
+  </a>
+  <a href="/books/{{book.id}}/delete" class="btn btn-danger btn-sm">
+    <i class="glyphicon glyphicon-trash"></i>
+    Delete book
+  </a>
+</div>
+
+</div>
+
+
+
+{% endblock %}

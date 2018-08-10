@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QAMS</title>
+
+    <!-- CSS
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body class>
+
+
+  <header>
+        <nav class="top-nav">
+          <div class="container">
+            <div class="nav-wrapper">
+              <div class="row">
+                <div class="col s12 m10 offset-m1">
+                  <h1 class="header">Supplier Details</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+          <ul id="nav-mobile" class="sidenav sidenav-fixed" style="transform: translateX(0%);">
+            <li class="logo"><a id="logo-container" href="/" class="brand-logo"></a></li>
+          <li class="bold"><a href="#" class="waves-effect waves-teal">Supplier</a></li>
+          <li class="bold"><a href="#" class="waves-effect waves-teal">Site</a></li>
+          <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+              <li class="bold">
+                <a class="collapsible-header waves-effect waves-teal" tabindex="0">Products</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="#">Audit</a></li>
+                    <li><a href="#">Details</a></li>
+                  </ul>
+                </div>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+      </header>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+    <nav class="light-blue darken-2" role="navigation">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo white-text">Group QA</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><span id="name">Welcome Matt Startin</span></li>
+                <li><a class="light-blue darken-1 waves-effect waves-light btn" id="signOut">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav> -->
+<main>
+    <!--
+      <div class="row headerRow">
+        <div class="col s12 m12 l12 blue lighten-3">
+            <p>SUPPLIER DETAILS</p>
+        </div>
+    </div>
+
+
+       <div class="col s12 m3 l2 blue lighten-4">
+
+            <div class="section">
+                <p></p>
+            </div>
+
+            <div class="divider black"></div>
+            <div class="section deep-purple lighten-4">
+                <p>Primary</p>
+            </div>
+
+            <div class="divider black"></div>
+            <div class="section">
+                <p>CSR</p>
+            </div>
+
+            <div class="divider black"></div>
+            <div class="section">
+                <p>Activities</p>
+            </div>
+
+            <div class="divider black"></div>
+            <div class="section">
+                <p>Sites</p>
+            </div>
+
+            <div class="divider black"></div>
+            <div class="section">
+                <p>Products</p>
+            </div>
+
+            <div class="divider  black "></div>
+            <div class="section">
+                <p>Audit</p>
+            </div>
+
+            <div class="divider black"></div>
+            <div class="section">
+                <p></p>
+            </div>
+            <div class="section">
+                <p></p>
+            </div>
+        </div> -->
+
+        <div class="container">
+        <div class="row">
+          <div class="col s12 m8 offset-m1 xl7 offset-xl1">
+
+            <div class="section">
+                <h5>Main Details</h5>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Supplier Name</label>
+
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">account_balance</i>
+                        <input id="icon_parent" type="tel" class="validate">
+                        <label for="icon_parent">Parent Company</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">important_devices</i>
+                        <input id="icon_website" type="text" class="validate">
+                        <label for="icon_website">Website</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">business_center</i>
+                        <input id="icon_units" type="text" class="validate">
+                        <label for="icon_units">Business Unit(s)</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">assignment_ind</i>
+                        <select class="icons" id="icon_office">
+                            <option value="" disabled selected>Mr Manager</option>
+                            <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                            <option value="" data-icon="images/office.jpg">example 2</option>
+                            <option value="" data-icon="images/yuna.jpg">example 3</option>
+                        </select>
+                        <label for="icon_office">QA Manager</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">language</i>
+                        <select class="icons" id="icon_office">
+                            <option value="" disabled selected>Asia</option>
+                            <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                            <option value="" data-icon="images/office.jpg">example 2</option>
+                            <option value="" data-icon="images/yuna.jpg">example 3</option>
+                        </select>
+                        <label for="icon_office">QA Office</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider deep-purple lighten-2"></div>
+            <div class="section">
+                <h5>Address</h5>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_addr1" type="text" class="validate">
+                        <label for="icon_addr1">Address 1</label>
+
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">account_balance</i>
+                        <input id="icon_addr2" type="tel" class="validate">
+                        <label for="icon_addr2">Address 2</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">important_devices</i>
+                        <input id="icon_addr3" type="text" class="validate">
+                        <label for="icon_addr3">Address 3</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">business_center</i>
+                        <input id="icon_addr4" type="text" class="validate">
+                        <label for="icon_addr4">Address 4</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">business_center</i>
+                        <input id="icon_pcode" type="text" class="validate">
+                        <label for="icon_pcode">Post Code</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">business_center</i>
+                        <input id="icon_phone" type="text" class="validate">
+                        <label for="icon_phone">Telephone</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s4">
+                          <i class="material-icons prefix">business_center</i>
+                          <input id="icon_town" type="text" class="validate">
+                          <label for="icon_town">Town/City</label>
+                      </div>
+                      <div class="input-field col s4">
+                          <i class="material-icons prefix">business_center</i>
+                          <input id="icon_county" type="text" class="validate">
+                          <label for="icon_county">County</label>
+                      </div>
+                      <div class="input-field col s4">
+                          <i class="material-icons prefix">assignment_ind</i>
+                          <select class="icons" id="icon_country">
+                              <option value="" disabled selected>Please Select</option>
+                              <option value="" data-icon="images/sample-1.jpg">China</option>
+                              <option value="" data-icon="images/office.jpg">UK</option>
+                              <option value="" data-icon="images/yuna.jpg">Other</option>
+                          </select>
+                          <label for="icon_country">Country</label>
+                      </div>
+                  </div>
+
+            </div>
+
+            <div class="divider deep-purple lighten-2"></div>
+            <div class="section">
+                <h5>Contacts</h5>
+                <div class="row">
+                  <div class="col s3">
+                    <div class="card blue-grey darken-1">
+                      <div class="card-content white-text">
+                        <span class="card-title">QA Contact Name</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                         <p>Job Title</p>
+                         <p>Phone Number</p>
+                         <p>Mobile</p>
+                         <p>email</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s3 offset-s1">
+                    <div class="card blue-grey darken-1">
+                      <div class="card-content white-text">
+                        <span class="card-title">QA Contact Name</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                         <p>Job Title: </p>
+                         <p>Phone Number: 1815051</p>
+                         <p>Mobile: 07975</p>
+                         <p>email: </p>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                </div>
+            </div>
+
+            <div class="divider deep-purple lighten-2"></div>
+            <div class="section">
+                <h5>Notes</h5>
+                <div class="row">
+                  <div class="col s3">
+                    <div class="card blue-grey darken-1">
+                      <div class="card-content white-text">
+                        <span class="card-title">QA Contact Name</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                         <p>Job Title</p>
+                         <p>Phone Number</p>
+                         <p>Mobile</p>
+                         <p>email</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s3 offset-s1">
+                    <div class="card blue-grey darken-1">
+                      <div class="card-content white-text">
+                        <span class="card-title">QA Contact Name</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                         <p>Job Title: </p>
+                         <p>Phone Number: 1815051</p>
+                         <p>Mobile: 07975</p>
+                         <p>email: </p>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col hide-on-small-only m3 xl3 offset-xl1">
+              <div class="toc-wrapper pin-top" style="top: 0px;">
+                <div style="height: 1px;">
+                  <ul class="section table-of-contents">
+                    <li>
+                      <a href="#introduction" class="active">Introduction</a>
+                    </li>
+                    <li>
+                      <a href="#initialization" class="">Initialization</a>
+                    </li>
+                    <li>
+                      <a href="#options" class="">Options</a>
+                    </li>
+                    <li>
+                      <a href="#methods" class="">Methods</a>
+                    </li>
+                    <li>
+                      <a href="#properties" class="">Properties</a>
+                    </li>
+                    <li>
+                      <a href="#classes" class="">CSS classes</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      </div>
+        </div>
+
+</main>
+    <!--  Scripts-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

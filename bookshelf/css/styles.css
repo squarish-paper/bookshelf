@@ -1,0 +1,39 @@
+body, html {
+  font-family: 'Mallanna', sans-serif;
+}
+
+h1.center {
+  text-align: center;
+}
+
+#user-banner {
+  text-align: center;
+}
+
+#user-banner span {
+  margin: 8px;
+}
+
+#user-banner #photoUrl {
+  width: 32px;
+  height: 32px;
+}
+
+#userList {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.deleteUser, .cancelEdit {
+  margin-left: 40px;
+}
+
+.row {
+  height:50px;
+}
+
+.infoMessage{
+  font-size: 14pt;
+}
+
+.section { display: none;}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookshelf - Python on Google Cloud Platform</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="/css/prism.css" rel="stylesheet">
+    <link href="/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+
+
+
+  </head>
+  <body style="overflow:hidden">
+
+    <header>
+       <nav class="top-nav">
+          <div class="container">
+             <div class="nav-wrapper">
+                <div class="row">
+                   <div class="col s12 m10 offset-m1">
+                      <h1 class="header">{% block info %}{% endblock %}</h1>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </nav>
+       <div class="container">
+          <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger full hide-on-large-only"><i class="material-icons">menu</i></a>
+       </div>
+       <ul id="nav-mobile" class="sidenav sidenav-fixed" style="overflow: auto; transform: translateX(0px);">
+          <li class="logo">
+              <a id="logo-container" href="/" class="brand-logo">
+                <div class="row">
+                   <i class="large material-icons prefix cyan-text text-darken-2">assignment_ind</i>
+                 </div>
+                 <div class="row">
+                   <h5 class="cyan-text text-darken-4">Python App</h5>
+                 </div>
+              </a>
+          </li>
+
+          {% if session.profile %}
+          <div class="divider deep-purple lighten-2"></div>
+          <li class="bold"><a href="/books/add" class="waves-effect waves-teal">Add Book</a></li>
+          <li class="bold"><a href="/books" class="waves-effect waves-teal">All Books</a></li>
+          <li class="bold"><a href="/books/mine" class="waves-effect waves-teal">My Books</a></li>
+          <li class="no-padding">
+             <ul class="collapsible collapsible-accordion">
+                <li class="bold">
+                   <a class="collapsible-header waves-effect waves-teal" tabindex="0">[TODO] Other Stuff</a>
+                   <div class="collapsible-body">
+                      <ul>
+                        <li><a href="">Things</a></li>
+                        <li><a href="">Test</a></li>
+                      </ul>
+                   </div>
+                </li>
+             </ul>
+          </li>
+          {% endif %}
+
+          <div class="divider deep-purple lighten-2"></div>
+          {# [START profile] #}
+          <p class="navbar-text navbar-right">
+          {% if session.profile %}
+              {% if session.profile.image %}
+                <img class="img-circle" src="{{session.profile.image.url}}" width="24">
+              {% endif %}
+              {{session.profile.displayName}}
+                <a href="/logout">Logout</a>
+          {% else %}
+            <a href="/oauth2authorize">Login</a>
+          {% endif %}
+          </p>
+          {# [END profile] #}
+       </ul>
+    </header>
+
+
+    <main>
+
+    {% if session.profile %}
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+    {% else %}
+      <div class="container">
+          <span>You need to login to see my books!
+      </div>
+    {% endif %}
+
+  </main>
+
+  <footer class="page-footer docs-footer">
+     <div class="container">
+     <div class="row" style="margin-bottom: 0;">
+        <div class="col s12 m10 offset-m1">
+           <div class="row" style="height:100px;">
+           </div>
+        </div>
+     </div>
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>if (!window.jQuery) { document.write('<script src="bin/jquery-3.2.1.min.js"><\/script>'); }
+  </script>
+  <script src="/docs/js/index.js"></script>
+  <script src="/docs/js/jquery.timeago.min.js"></script>
+  <script src="/docs/js/prism.js"></script>
+  <script src="/docs/js/lunr.min.js"></script>
+  <script src="/docs/js/search.js"></script>
+  <script src="/docs/js/materialize.js"></script>
+  <script src="/docs/js/init.js"></script>
+  <!-- Google Plus Button -->
+  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+
+
+    {{user}}
+  </body>
+
+
+
+
+
+
+
+
+</html>

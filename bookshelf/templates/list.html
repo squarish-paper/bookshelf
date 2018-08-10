@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block info %}
+My Library
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  {% for book in books %}
+  <div class="col s3 m3 l3">
+    <div class="card medium">
+    <a href="/books/{{book.id}}">
+      <div class="card-image">
+        <img src="{{book.imageUrl|default('../images/book.jpg', True)}}">
+        <span class="card-title">{{book.rating|default('[Unrated]', True)}}</span>
+      </div>
+      <div class="card-content">
+        <span class="card-title">{{book.title}}</span>
+        <p>{{book.author|default('Unknown', True)}}</p>
+      </div>
+      <div class="card-action">
+        <small>Published: {{book.publishedDate}}</small>
+      </div>
+    </a>
+    </div>
+    </div>
+  {% else %}
+  <p>No books found</p>
+  {% endfor %}
+</div>
+
+{% if next_page_token %}
+<ul class="pagination">
+    <li class="disabled"><a href="/books"><i class="material-icons">chevron_left</i></a></li>
+    <li class="waves-effect"><a href="?page_token={{next_page_token}}"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+{% endif %}
+
+{% endblock %}
